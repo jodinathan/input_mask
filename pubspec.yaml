@@ -1,0 +1,13 @@
+name: input_mask
+description: An interface for RobinHerbots's InputMask: https://github.com/RobinHerbots/Inputmask
+version: 0.0.1
+homepage: https://www.example.com
+author: JonathanRezende jonathan@jode.com.br
+
+environment:
+  sdk: '>=2.0.0 <3.0.0'
+
+dependencies:
+
+dev_dependencies:
+  test: ^1.0.0
