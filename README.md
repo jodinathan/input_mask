@@ -1,4 +1,4 @@
-An interface to use with Robin Herbot's InputMask: 
+A Dart interface to use with Robin Herbot's InputMask: 
 https://github.com/RobinHerbots/Inputmask
 
 *Not all* options are added.  
