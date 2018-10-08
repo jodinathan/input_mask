@@ -2,7 +2,7 @@ name: input_mask
 description: A Dart interface for RobinHerbots's InputMask
 version: 0.0.1
 homepage: https://www.example.com
-author: JonathanRezende jonathan@jode.com.br
+author: JonathanRezende <jonathan@jode.com.br>
 
 environment:
   sdk: '>=2.0.0 <3.0.0'
