@@ -1,5 +1,5 @@
 name: input_mask
-description: An interface for RobinHerbots's InputMask: https://github.com/RobinHerbots/Inputmask
+description: A Dart interface for RobinHerbots's InputMask
 version: 0.0.1
 homepage: https://www.example.com
 author: JonathanRezende jonathan@jode.com.br
