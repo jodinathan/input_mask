@@ -1,24 +1,25 @@
-import 'dart:js';
 import 'dart:html';
+import 'dart:js';
+
 import 'package:input_mask/input_mask.dart';
 
-main() {
-  Mask mask;
+void main() {
+  InputMask mask;
 
   final inputElement = document.createElement('input');
   // or you can get it like:
   // @ViewChild('inp') InputElement inputElement;
 
-  mask = new Mask(new MaskOptions(
+  mask = InputMask(Options(
       showMaskOnHover: false,
       alias: 'integer',
       rightAlign: false,
-      oncomplete: allowInterop((dynamic a){
-        String clean = mask.unmaskedvalue();
+      oncomplete: allowInterop((dynamic a) {
+        final clean = mask.unmaskedvalue();
 
         print('Complete: $clean');
       }),
-      onincomplete: allowInterop((dynamic a){
+      onincomplete: allowInterop((dynamic a) {
         print('Incomplete');
       }),
       oncleared: allowInterop((a){
