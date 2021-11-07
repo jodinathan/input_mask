@@ -30,6 +30,7 @@ class JsInterop {
   static Future<bool> safeAddScript(String name, String buffer,
       {String contextCheck}) async {
     contextCheck ??= name;
+    assert(buffer?.isNotEmpty == true);
 
     if (hasContext(contextCheck)) return true;
 
