@@ -2,7 +2,7 @@ A Dart interface to use with Robin Herbot's InputMask:
 https://github.com/RobinHerbots/Inputmask
 
 *Not all* options are added.  
-But you can file an issue and I will add what you need.
+But you can send a PR to add it or open an issue and we figure it out.
 
 
 ## Usage

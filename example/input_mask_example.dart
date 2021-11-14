@@ -4,7 +4,7 @@ import 'dart:js';
 import 'package:input_mask/input_mask.dart';
 
 void main() {
-  InputMask mask;
+  late InputMask mask;
 
   final inputElement = document.createElement('input');
   // or you can get it like:

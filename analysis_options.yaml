@@ -1,4 +1,4 @@
-include: package:pedantic/analysis_options.yaml
+include: package:lints/analysis_options.yaml
 
 analyzer:
   language:
@@ -10,33 +10,5 @@ analyzer:
 
 linter:
   rules:
-    #- avoid_dynamic_calls
-    - cancel_subscriptions
-    - hash_and_equals
-    - iterable_contains_unrelated_type
-    - list_remove_unrelated_type
-    - test_types_in_equals
-    - unrelated_type_equality_checks
-    - valid_regexps
-    - type_annotate_public_apis
-    - empty_statements
-    - invariant_booleans
-    - prefer_void_to_null
-    - unnecessary_statements
-    - avoid_bool_literals_in_conditional_expressions
-    - avoid_double_and_int_checks
-    - avoid_function_literals_in_foreach_calls
-    - avoid_implementing_value_types
-    - avoid_js_rounded_ints
-    - avoid_renaming_method_parameters
-    - avoid_void_async
-    - await_only_futures
-    - cascade_invocations
-    - join_return_with_assignment
-    - lines_longer_than_80_chars
-    - prefer_if_elements_to_conditional_expressions
-    - prefer_null_aware_operators
-    - prefer_typing_uninitialized_variables
-    - unnecessary_lambdas
-    - unnecessary_null_in_if_null_operators
-    - use_is_even_rather_than_modulo
+    - avoid_dynamic_calls
+

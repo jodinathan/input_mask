@@ -27,10 +27,10 @@ class JsInterop {
     return ret;
   }
 
-  static Future<bool> safeAddScript(String name, String buffer,
-      {String contextCheck}) async {
+  static Future<bool>? safeAddScript(String name, String buffer,
+      {String? contextCheck}) async {
     contextCheck ??= name;
-    assert(buffer?.isNotEmpty == true);
+    assert(buffer.isNotEmpty == true);
 
     if (hasContext(contextCheck)) return true;
 
@@ -39,23 +39,23 @@ class JsInterop {
 
       print('AddingScript $name');
       _scriptFetched[name] = c.future;
-      html.document.body.children.add(script(buffer));
+      html.document.body!.children.add(script(buffer));
 
       Timer.periodic(Duration(milliseconds: 300), (t) {
-        if (hasContext(contextCheck)) {
+        if (hasContext(contextCheck!)) {
           t.cancel();
           c.complete(true);
         }
       });
     }
 
-    return _scriptFetched[name];
+    return _scriptFetched[name]!;
   }
 }
 
 Future<bool> enableInputMask() => bundle.loadLibrary().then((dynamic lib) =>
     JsInterop.safeAddScript('InputMask', bundle.buffer,
-        contextCheck: 'Inputmask'));
+        contextCheck: 'Inputmask')!);
 
 @JS('Inputmask')
 class InputMask {
@@ -100,18 +100,18 @@ class Options {
   external bool get rightAlign;
 
   external factory Options(
-      {String mask,
-      void Function(Object) oncleared,
-      void Function(Object) oncomplete,
-      void Function(Object) onincomplete,
-      MaskDefinitions definitions,
-      bool insertMode,
-      String alias,
-      String radixPoint,
-      String prefix,
+      {String? mask,
+      void Function(Object)? oncleared,
+      void Function(Object)? oncomplete,
+      void Function(Object)? onincomplete,
+      MaskDefinitions? definitions,
+      bool? insertMode,
+      String? alias,
+      String? radixPoint,
+      String? prefix,
       bool showMaskOnHover = false,
-      int digits,
-      bool clearMaskOnLostFocus,
+      int? digits,
+      bool? clearMaskOnLostFocus,
       String disablePredictiveText = 'rtfm',
       bool rightAlign = false});
 }
@@ -121,7 +121,7 @@ class Options {
 class MaskDefinitions {
   external MaskDefinition get X;
 
-  external factory MaskDefinitions({MaskDefinition X});
+  external factory MaskDefinitions({MaskDefinition? X});
 }
 
 @JS()
@@ -134,5 +134,5 @@ class MaskDefinition {
   external String get casing;
 
   external factory MaskDefinition(
-      {String validator, int cardinality, String casing});
+      {String? validator, int? cardinality, String? casing});
 }
